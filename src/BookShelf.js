@@ -12,7 +12,7 @@ export default function BookShelf({title, books}) {
     <div className="bookshelf">
       <h2 className="bookshelf-title">{title}</h2>
       <div className="bookshelf-books">
-        <BookGrid classProp="books-grid" books={books} />
+        <BookGrid books={books} />
       </div>
     </div>
   )
