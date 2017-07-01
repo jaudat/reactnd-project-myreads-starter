@@ -10,8 +10,7 @@ export default class SearchPage extends Component {
     query: ''
   }
 
-  updateQuery(inputVal) {
-    var query = inputVal.trim()
+  updateQuery(query) {
     if (!query) { 
       this.setState({ query: '' , results: [] })
     } else {

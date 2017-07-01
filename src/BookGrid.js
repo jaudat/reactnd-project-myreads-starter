@@ -16,15 +16,15 @@ export default class BookGrid extends Component {
   }
 
   changeShelf(book, newShelf) {
-    var updateView = this.props.updateView
+    const updateView = this.props.updateView
     BooksAPI.update(book, newShelf).then( allBooks => updateView && updateView() )
   }
 
   render() {
-    var books = this.props.books
+    const books = this.props.books
     return (
       <ol className='books-grid'>
-        {books.map( (book, index) => <Book key={index} book={book} updateBook={this.changeShelf} /> )}
+        {books && books.map( (book, index) => <Book key={index} book={book} updateBook={this.changeShelf} /> )}
       </ol>
     )
   }
